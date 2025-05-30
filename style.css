@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+  }
+  
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+     min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+     
+
+    }
+    main {
+  flex-grow:1;
+  padding: 20px;
+
+ 
+}
+
+   header {
+    background-color: rgba(15, 32, 39, 0.9);
+    color:white;
+      padding:1rem;
+     
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+      
+     
+   }
+    span{
+      color: #00d4ff;
+    }
+   .menu-taggle{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position:relative;
+      margin-left:90%;
+      margin-top: -20px;
+    
+    }
+    .menu-taggle span{
+      background: white;
+      height:3px;
+      margin:4px 0;
+      width:25px;
+  
+    }
+     
+    nav{
+      display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  
+    }
+    nav a {
+      color: white;
+      font-size: larger;
+      font-weight: bold;
+      text-decoration: none;
+   
+      padding:0.5rem 1rem;
+      border-radius: 5px;
+      
+    }
+  
+    #menu-checkbox{
+      display: none;
+    }
+    @media(max-width:600px){
+      header{
+        flex-direction: column;
+
+      justify-content: center;
+        align-items: center;
+      }
+      header h2{
+        text-align:center;
+        width:100%;
+       
+        margin-bottom: 0;
+      }
+    }
+
+@media(max-width:600px){
+  .menu-taggle{
+    display: flex;}
+    nav{
+      display:none;
+flex-direction: column;
+text-align: center;
+position:static;
+top:60px;
+right: 0;
+width:100%;
+
+    }
+  
+  
+#menu-checkbox:checked ~ nav{
+  display: flex;
+}
+nav a{
+  display:block;
+  width:100%;
+  padding:1rem;
+
+}}
+
+    nav a:hover {
+      background-color:#00d4ff;
+      color: black;
+    }
+
+   
+    
+    footer {
+  display: flex;
+ font-size: 1rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(15, 32, 39, 0.9);
+  color:white;
+  margin-top: auto;
+
+ 
+}
+  
