@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror Of My Mind/Education</title>
+  <link rel="stylesheet"  href="style.css">
+<style>
+
+
+  main {
+    flex-grow: 1;
+    padding: 20px;
+    background-image:url("images/1000051960.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+ 
+  }
+
+ 
+
+  .timeline {
+  position: relative;
+  margin: 2rem 0 2rem 2rem; 
+  padding-left: 30px;
+  border-left: 5px solid whitesmoke;
+  max-width: 600px;
+  align-self: flex-start; 
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color:white;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 12px;
+}
+
+.card {
+  background:#0f2027;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px 10px rgba(183, 191, 203, 0.2);
+  animation: fadeIn 2s ease-in;
+  
+}
+
+.card summary {
+  cursor: pointer;
+  color:#00d4ff;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.card summary::marker {
+  display: none;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card[open] {
+  background-color: #0f2027;
+  border-left: 4px solid white;
+  color:whitesmoke;
+  font-size: 1rem;;
+}
+
+.read-more {
+  font-size: 0.85rem;
+  color:whitesmoke;
+  font-weight: normal;
+}
+
+.card[open] summary .read-more {
+  display: none;
+}
+
+ @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1><span>Monira</span> Lotfy</h1>
+    <label class="menu-taggle" for="menu-checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <input type="checkbox" id="menu-checkbox" />
+    <nav>
+    
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="experiance.html">Experiences</a>
+      
+      <a href="contact.html">Contact</a>
+    </nav>  </header>
+
+  <main>
+ 
+  <section class="timeline">
+    <h2 style=" color:#f2f6f7; margin: 2rem 0;font-size: 2rem;">
+    
+      Academic Journey</h2>
+    <div class="timeline-item">
+      <details class="card">
+        <summary>Univercity<span class="read-more">Read more</span></summary>
+        <p>Bachelor's Degree in Computer Science </p>
+        <p>Herat University- Herat Afghanistan</p>
+        <p>2010-2013</p>
+      </details></div>
+      <div class="timeline-item">
+        <details class="card">
+          <summary>High School<span class="read-more">Read more</span></summary>
+          <p> High School Diploma</p>
+          <p>Abomansour Ali High School- Herat Afganistan</p>
+          <p>2019</p>
+        </details>
+      </div>
+ <h2 style=" color:#f2f6f7; margin: 2rem 0;font-size: 2rem;">Training Courses</h2>
+      <div class="timeline-item">
+        <details class="card">
+          <summary>Computer Skills<span class="read-more">Read more</span></summary>
+          <p>ICDL  </p>
+          <p>LCLC- Herat Afghanistan</p>
+          <p>2011</p>
+        </details>
+    </div>
+
+    <div class="timeline-item">
+      <details class="card">
+        <summary>Leadership<span class="read-more">Read more</span></summary>
+        <p>Leadership and Management</p>
+        <p>Public Speaking & Communication</p>
+       <p>Herat Province - Herat Afganistan</p>
+       
+       <p>2018</p>
+
+      </details>
+    </div>
+
+   
+
+    
+  </section>
+</main>
+
+  <footer>
+    <p>&copy 2025 Monira Lotfy. All rights reserved</p>
+  </footer>
+
+</body>
+</html>

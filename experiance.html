@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiences</title>
+ 
+
+<style>
+   *{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+  }
+  
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+     min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+     
+
+    }
+    main {
+  flex-grow:1;
+  padding: 20px;
+
+ 
+}
+
+   header {
+    background-color: rgba(15, 32, 39, 0.9);
+    color:white;
+      padding:1rem;
+     
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+      
+     
+   }
+    span{
+      color: #00d4ff;
+    }
+   .menu-taggle{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position:relative;
+      margin-left:90%;
+      margin-top: -20px;
+    
+    }
+    .menu-taggle span{
+      background: white;
+      height:3px;
+      margin:4px 0;
+      width:25px;
+  
+    }
+     
+    nav{
+      display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  
+    }
+    nav a {
+      color: white;
+      font-size: larger;
+      font-weight: bold;
+      text-decoration: none;
+   
+      padding:0.5rem 1rem;
+      border-radius: 5px;
+      
+    }
+  
+    #menu-checkbox{
+      display: none;
+    }
+    @media(max-width:600px){
+      header{
+        flex-direction: column;
+
+      justify-content: center;
+        align-items: center;
+      }
+      header h2{
+        text-align:center;
+        width:100%;
+       
+        margin-bottom: 0;
+      }
+    }
+
+@media(max-width:600px){
+  .menu-taggle{
+    display: flex;}
+    nav{
+      display:none;
+flex-direction: column;
+text-align: center;
+position:static;
+top:60px;
+right: 0;
+width:100%;
+
+    }
+  
+  
+#menu-checkbox:checked ~ nav{
+  display: flex;
+}
+nav a{
+  display:block;
+  width:100%;
+  padding:1rem;
+
+}}
+
+    nav a:hover {
+      background-color:#00d4ff;
+      color: black;
+    }
+
+   
+    
+    footer {
+  display: flex;
+ font-size: 1rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(15, 32, 39, 0.9);
+  color:white;
+  margin-top: auto;}
+  main {
+    flex-grow: 1;
+    padding: 20px;
+    background-image:url("images/work2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+ 
+
+.experience-wrapper {
+  max-width: 80%;
+  margin: auto;
+}
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.exp-card:hover {
+  transform: translateY(-5px);
+  background-color:rgb(7, 131, 255);
+}
+
+.exp-card h3 {
+  font-size: 1.3rem;
+  color:rgb(37, 35, 35);
+  margin-bottom: 0.5rem;
+}
+
+.exp-card h4 {
+  font-size: 1rem;
+  color:rgb(45, 34, 34);
+  margin-bottom: 0.5rem;
+}
+
+.exp-card .year {
+  display: block;
+  margin-bottom: 1rem;
+  color:rgb(37, 35, 35);
+}
+
+.exp-card .desc {
+  display: none;
+  margin-top: 1rem;
+  line-height: 1.5;
+  color:black;
+}
+
+.exp-card .toggle {
+  display: none;
+}
+
+.exp-card .toggle:checked ~ .desc {
+  display: block;
+}
+
+.exp-card .toggle:checked ~ .read-more {
+  display: none;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color:black;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+@keyframes slideIn {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  
+</style>
+
+</head>
+<body>
+ 
+  <header>
+   
+    <h1><span>Monira</span> Lotfy</h1>
+<label class="menu-taggle" for="menu-checkbox" >
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+<input type="checkbox" id="menu-checkbox"/>
+<nav>
+    
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="experiance.html">Experiences</a>
+    
+    <a href="contact.html">Contact</a>
+  </nav>  </header>
+  <main id="experience">
+    <h2 style="text-align:center;color:rgb(249, 11, 185); margin: 2rem 0;font-size: 2rem;">
+      Career Background</h2>
+  
+    <div class="experience-wrapper">
+      <div class="experience-cards">
+        <div class="exp-card">
+          <h3>Social Media Trainer</h3>
+          <h4> Women Annex</h4>
+          <span class="year"> 2011</span>
+          <input type="checkbox" id="exp1" class="toggle">
+          <p class="desc">
+            Delivered training in digital content creation, blogging,
+             and social media management to young women, aiming to
+             empower them to utilize online platforms effectively.
+          </p>
+          <label for="exp1" class="read-more">Read more</label>
+        </div>
+  
+        <div class="exp-card">
+            <h3>Statistics and Database Manager</h3>
+            <h4> Herat University Administration</h4>
+            <span class="year"> 2015-2024</span>
+          <input type="checkbox" id="exp2" class="toggle">
+          <p class="desc">
+            Oversaw statistical data collection and reporting for
+            various university departments and ensured accessibility
+             of institutional records. Also managed the official university 
+             website, keeping content updated and aligned with administrative needs. 
+             Collected and compiled official statistics to be submitted directly
+            to the Ministry of Higher Education.
+          </p>
+          <label for="exp2" class="read-more">Read more</label>
+        </div>
+  
+        <div class="exp-card">
+            <h3>Computer Instructor</h3>
+            <h4>Erteqa Educational Center</h4>
+          <span class="year"> 2025</span>
+          <input type="checkbox" id="exp3" class="toggle">
+          <p class="desc">
+            Delivered computer training courses to students of 
+            various age groups, covering essential digital literacy, 
+            Microsoft Office tools, and basic programming. Focused on
+             practical learning and empowering
+             students with skills for academic and professional growth.
+          </p>
+          <label for="exp3" class="read-more">Read more</label>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+   
+    <p>&copy 2025 Monira Lotfy. All rights reserved</p>
+  </footer>
+
+</body>
+</html>
