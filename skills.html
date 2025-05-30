@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror Of My Mind</title>
+  <link rel="stylesheet"  href="style.css">
+<style>
+
+  main {
+    flex-grow: 1;
+    padding: 20px;
+    background-image:url("images/1000051959.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+
+  .skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 700px;
+  margin:1.5rem auto;
+  padding:2rem 1rem;
+  border-radius:20px;
+ 
+  box-shadow:0 0 10px 10px rgba(0,212,255,0.3);
+}
+
+.skill-line {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+ 
+}
+
+.skill-line span {
+  width: 120px;
+  font-weight: bold;
+  font-size:1.2rem;
+  color:black;
+  flex-shrink: 0;
+  background-color:rgb(255, 255, 255);
+  padding:1px;
+  border-radius:5px;
+  text-align: center;
+
+}
+.skill-line span:hover{
+  padding:3px;
+
+  background-color:orangered;
+
+}
+
+.progress-bar {
+  background-color:black;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  flex-grow: 1;
+  border:1px solid black;
+}
+
+@keyframes fillBar{
+  from{width:0;}
+  to{width:var(--bar-width);
+  }
+}
+
+.progress {
+  
+  height: 100%;
+  color:black;
+  text-align: center;
+  padding-right: 8px;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 20px;
+  animation: fillBar 2s ease forwards;
+}
+
+.mg{
+  --bar-width:95%;background-color:green}
+.te{--bar-width:90%; background-color:yellow;}
+.pro{--bar-width:85%;background-color:orange}
+.web{--bar-width:88%;background-color:rgb(127, 127, 241)}
+.php{ --bar-width:75%;background-color:#e57373;}
+
+@media (max-width: 500px) {
+  .skill-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-line span {
+    width: auto;
+    margin-bottom: 5px;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <header>
+    <h1><span>Monira</span> Lotfy</h1>
+    <label class="menu-taggle" for="menu-checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <input type="checkbox" id="menu-checkbox" />
+    <nav>
+    
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="experiance.html">Experiences</a>
+      
+      <a href="contact.html">Contact</a>
+    </nav> 
+  </header>
+  <main id="Skills">
+  <h2 style="text-align:center; margin-top:3rem; color:white;font-size: 2rem;">SKILLS</h2>
+    <section class="skills-bars">
+      <div class="skill-line ">
+        <span>Management</span>
+        <div class="progress-bar"><div class="progress mg" style="width: 95%;">95%</div></div>
+      </div>
+      <div class="skill-line ">
+        <span>Teaching</span>
+        <div class="progress-bar"><div class="progress te" style="width: 90%;">90%</div></div>
+      </div>
+      <div class="skill-line">
+        <span> Java Programming</span>
+        <div class="progress-bar"><div class="progress pro" style="width: 85%;">85%</div></div>
+      </div>
+      <div class="skill-line">
+        <span>Html &CSS</span>
+        <div class="progress-bar"><div class="progress web" style="width: 90%;">90%</div></div>
+      </div>
+      <div class="skill-line">
+        <span>PHP</span>
+        <div class="progress-bar"><div class="progress php" style="width: 75%;">75%</div></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+   
+    <p>&copy 2025 Monira Lotfy. All rights reserved</p>
+    
+  </footer>
+</body>
+</html>
